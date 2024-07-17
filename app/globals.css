@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  background: white;
+  overflow-x: hidden;
+ 
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+/* .navbar section  */
+.mobileViewLogo{
+  width: 100%;
+  height: auto;
+}
+/* .navbar section ending */
+
+
+
+/* Hero section startting */
+.hero{
+  height: 85vh;
+  padding-top: 60px!important
+}
+
+@media (min-width: 992px){
+  .hero{
+    height: 135vh;
+  }
+  .hero h1{
+    line-height: 84px;
+  }
+
+  /* download section starting  */
+  .download h1{
+    line-height: 84px;
+  }
+  /* download section ending */
+}
+/* Hero section ending */
+
+@media  (max-width: 768px) {
+  .navbar .mobileView{
+    position: absolute;
+    text-align: center;
+    height: 90vh;
+    width: 100%;
+    background-color: white;
+    top: 50px;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction : column;
+    justify-content: center;
+    transition: all 0.3s ease-in;
+  }
+  .mobileViewLogo{
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+/* why us starting  */
+/* .whyContainer{
+  height: auto ;
+}
+@media(min-width: 992px) {
+  .whyContainer{
+    height: 600px;
+  }
+} */
+/* why us ending */
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000; 
+  border-radius: 100px
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000; 
+}
+
+.apexcharts-toolbar{
+  display: none !important;
+}
+
+.trunck-text{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
